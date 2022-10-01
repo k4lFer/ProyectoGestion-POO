@@ -32,10 +32,10 @@ private DefaultTableModel modelo;
     }
    
     public void cargardatos(){
-    int tamaLista = ContenedorCodigos.size();
-       for (int i=0;i<tamaLista;i++){
+    int TamLista = ContenedorCodigos.size();
+       for (int i=0; i<TamLista; i++){
            if (ContenedorCodigos.get(i).equals(txtuser.getText())){
-                pos=i;   
+                pos = i;   
                 break;
             }
        }
