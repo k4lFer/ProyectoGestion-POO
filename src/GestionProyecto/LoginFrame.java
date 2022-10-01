@@ -167,7 +167,7 @@ public class LoginFrame extends javax.swing.JFrame {
                     this.dispose(); 
             }
                 else{
-                    JOptionPane.showMessageDialog(this, "Usted no esta registrado por el Docente");
+                    JOptionPane.showMessageDialog(this, "Usted no está Registrado ");
                 }
         }
         else{
