@@ -26,7 +26,7 @@ private DefaultTableModel modelo;
     int xMouse, yMouse;
     public Estudiante() {
         initComponents();
-        cargarinterfaaz();
+        CargarInterfazTabla();
         cargardatos();
          
     }
@@ -41,7 +41,7 @@ private DefaultTableModel modelo;
        }
     }
         
-    public void cargarinterfaaz(){    
+    public void CargarInterfazTabla(){    
     String Datos[][]={};
     String columna[]={"Codigo","Apellido Paterno","Apellido Materno","Nombre","Parcial I","Parcial II","Parcial III"};
     modelo=new DefaultTableModel(Datos,columna);
