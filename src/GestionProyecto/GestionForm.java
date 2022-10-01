@@ -471,8 +471,8 @@ public GestionForm(){
 
     private void bttvolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttvolverActionPerformed
         // TODO add your handling code here:
-        LoginFrame ventanalogin = new LoginFrame();
-        ventanalogin.setVisible(true);
+        LoginFrame VentanaLogin = new LoginFrame();
+        VentanaLogin.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_bttvolverActionPerformed
 

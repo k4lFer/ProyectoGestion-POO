@@ -18,7 +18,7 @@ import static GestionProyecto.LoginFrame.txtuser;
  */
 public class Estudiante extends javax.swing.JFrame {
 private DefaultTableModel modelo;
-    int cont=0;
+    int Contador=0;
     int pos=0;
     /**
      * Creates new form Estudiante
@@ -27,13 +27,13 @@ private DefaultTableModel modelo;
     public Estudiante() {
         initComponents();
         CargarInterfazTabla();
-        cargardatos();
+        CargarDatos();
          
     }
    
-    public void cargardatos(){
-    int TamLista = ContenedorCodigos.size();
-       for (int i=0; i<TamLista; i++){
+    public void CargarDatos(){
+    int TamLista = ContenedorCodigos.size(); //Cuando ingresa al contenedor, ya no se puede modificar 
+       for (int i=0; i < TamLista; i++){
            if (ContenedorCodigos.get(i).equals(txtuser.getText())){
                 pos = i;   
                 break;
@@ -44,7 +44,7 @@ private DefaultTableModel modelo;
     public void CargarInterfazTabla(){    
     String Datos[][]={};
     String columna[]={"Codigo","Apellido Paterno","Apellido Materno","Nombre","Parcial I","Parcial II","Parcial III"};
-    modelo=new DefaultTableModel(Datos,columna);
+    modelo = new DefaultTableModel(Datos,columna);
     Tablaestudiante.setModel(modelo);
 }
   
@@ -54,7 +54,7 @@ private DefaultTableModel modelo;
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        recibe = new javax.swing.JTextField();
+        recibeTxt = new javax.swing.JTextField();
         CodigoLabel = new javax.swing.JLabel();
         BttMostrar = new javax.swing.JButton();
         volver = new javax.swing.JButton();
@@ -72,11 +72,11 @@ private DefaultTableModel modelo;
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        recibe.setBackground(new java.awt.Color(51, 51, 51));
-        recibe.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
-        recibe.setForeground(new java.awt.Color(255, 255, 255));
-        recibe.setBorder(null);
-        jPanel1.add(recibe, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 80, 20));
+        recibeTxt.setBackground(new java.awt.Color(51, 51, 51));
+        recibeTxt.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
+        recibeTxt.setForeground(new java.awt.Color(255, 255, 255));
+        recibeTxt.setBorder(null);
+        jPanel1.add(recibeTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 80, 20));
 
         CodigoLabel.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
         CodigoLabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -181,24 +181,22 @@ private DefaultTableModel modelo;
 
     private void BttMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BttMostrarActionPerformed
         EstudianteFunciones e;
-            e=(EstudianteFunciones) listaalumnos.get(pos);
-            modelo.insertRow(cont,new Object[]{});
-            modelo.setValueAt(e.getCodigo(),cont,0);
-            modelo.setValueAt(e.getAppP(),cont,1);
-            modelo.setValueAt(e.getAppM(),cont,2);
-            modelo.setValueAt(e.getNombre(),cont,3);
-            modelo.setValueAt(e.getParcial1(),cont,4);
-            modelo.setValueAt(e.getParcial2(),cont,5);
-            modelo.setValueAt(e.getParcial3(),cont,6);        
+            e = (EstudianteFunciones) listaalumnos.get(pos);
+            modelo.insertRow(Contador,new Object[]{});
+            modelo.setValueAt(e.getCodigo(), Contador, 0);
+            modelo.setValueAt(e.getAppP(), Contador, 1);
+            modelo.setValueAt(e.getAppM(), Contador, 2);
+            modelo.setValueAt(e.getNombre(), Contador, 3);
+            modelo.setValueAt(e.getParcial1(), Contador, 4);
+            modelo.setValueAt(e.getParcial2(), Contador, 5);
+            modelo.setValueAt(e.getParcial3(), Contador, 6);        
     }//GEN-LAST:event_BttMostrarActionPerformed
 
     private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
         // TODO add your handling code here:
-        LoginFrame login= new LoginFrame();
-        login.setVisible(true);
-        this.dispose();
-        
-        
+        LoginFrame Login= new LoginFrame();
+        Login.setVisible(true);
+        this.dispose();       
     }//GEN-LAST:event_volverActionPerformed
 
     private void BttSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BttSalirActionPerformed
@@ -265,7 +263,7 @@ private DefaultTableModel modelo;
     private javax.swing.JLabel TituloLabel;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
-    public static javax.swing.JTextField recibe;
+    public static javax.swing.JTextField recibeTxt;
     public static javax.swing.JButton volver;
     // End of variables declaration//GEN-END:variables
 }

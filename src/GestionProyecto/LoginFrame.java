@@ -146,24 +146,24 @@ public class LoginFrame extends javax.swing.JFrame {
         String usuario = "admin";
         String contrasena = "admin";
         
-        String Pass = new String(txtpassword.getPassword()); 
+        String Passw = new String(txtpassword.getPassword()); 
         
-        String usu = txtuser.getText();
-        int CodASCII=0;
+        String User = txtuser.getText();
+        int CodASCII = 0;
         char Caracter;
-        boolean band=true;
-         for(int i=0;i<usu.length();i++){
-            Caracter = usu.charAt(i);
+        boolean band = true;
+         for(int i=0; i < User.length(); i++){
+            Caracter = User.charAt(i);
             CodASCII = (int)Caracter;
             if(CodASCII >= 48 && CodASCII <= 57){
                 band=false;
                 break;
             }}
-        if(band==false){
-            if(Gestion.comprobar(txtuser.getText())== true){
+        if(band == false){
+            if(Gestion.comprobar(txtuser.getText()) == true){
                     Estudiante VentanaEstudiante = new Estudiante();
                     VentanaEstudiante.setVisible(true);
-                    Estudiante.recibe.setText(usu);
+                    Estudiante.recibeTxt.setText(User);
                     this.dispose(); 
             }
                 else{
@@ -171,7 +171,7 @@ public class LoginFrame extends javax.swing.JFrame {
                 }
         }
         else{
-        if(txtuser.getText().equals(usuario) && Pass.equals(contrasena)){
+        if(txtuser.getText().equals(usuario) && Passw.equals(contrasena)){
             GestionForm VentanaGestion = new GestionForm();
             VentanaGestion.setVisible(true);
             this.dispose();
