@@ -150,19 +150,19 @@ public class LoginFrame extends javax.swing.JFrame {
         
         String usu = txtuser.getText();
         int CodASCII=0;
-        char caracter;
+        char Caracter;
         boolean band=true;
          for(int i=0;i<usu.length();i++){
-            caracter = usu.charAt(i);
-            CodASCII = (int)caracter;
+            Caracter = usu.charAt(i);
+            CodASCII = (int)Caracter;
             if(CodASCII >= 48 && CodASCII <= 57){
                 band=false;
                 break;
             }}
         if(band==false){
             if(Gestion.comprobar(txtuser.getText())== true){
-                    Estudiante ventanastudent = new Estudiante();
-                    ventanastudent.setVisible(true);
+                    Estudiante VentanaEstudiante = new Estudiante();
+                    VentanaEstudiante.setVisible(true);
                     Estudiante.recibe.setText(usu);
                     this.dispose(); 
             }
