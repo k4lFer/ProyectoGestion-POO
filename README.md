@@ -6,8 +6,8 @@ Simulando un inicio de sesión para docentes y alumnos, cada uno con su propia v
 con su codigo respectivo, nombres, apellidos y notas, con las opciones de editar y eliminar.
 
 Para ingresar como docente:
-|Usuario: admin
-|Contraseña: admin
+- Usuario: admin
+- Contraseña: admin
 
 En el caso del alumno debe ingresar con el codigo que se ingresó en la ventana de docente-gestion.
 Los codigos ingresados por primera vez en la ventana gestion, no se pueden modificar ni eliminar, estos se guardan de forma directa en el contenedor, 
